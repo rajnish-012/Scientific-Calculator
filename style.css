@@ -1,0 +1,125 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Calculator Container */
+.calculator {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease-in-out;
+}
+
+.calculator:hover {
+  transform: scale(1.01);
+}
+
+/* Display Screen */
+#display {
+  width: 100%;
+  height: 70px;
+  font-size: 2.4rem;
+  color: #fdfdfd;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: right;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.05);
+  letter-spacing: 1px;
+}
+
+/* Button Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* Generic Button Style */
+button {
+  width: 100%;
+  font-size: 1.3rem;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hover + Active States */
+button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+button:active {
+  transform: scale(0.96);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Special Buttons */
+button.zero {
+  grid-column: span 2;
+}
+
+/* Operator & Equals Button Colors */
+button:nth-child(4n),
+button:last-child {
+  background: linear-gradient(145deg, #ff512f, #dd2476);
+  color: #fff;
+  font-weight: bold;
+}
+
+button:nth-child(4n):hover,
+button:last-child:hover {
+  background: linear-gradient(145deg, #ff5e62, #f09819);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #display {
+    font-size: 1.8rem;
+    height: 60px;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .calculator {
+    width: 100%;
+  }
+}
