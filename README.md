@@ -1,3 +1,3 @@
 # Scientific-Calculator
 
-live https://scientific-calculator-eight-theta.vercel.app/
+live https://scientific-calculator-bld2.vercel.app/
